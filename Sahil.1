@@ -1,0 +1,17 @@
+def isPalindrome(n):
+    # Store original number
+    original = n
+    reversed_num = 0
+    
+    # Reverse the number
+    while n > 0:
+        digit = n % 10
+        reversed_num = reversed_num * 10 + digit
+        n = n // 10
+        
+    # Check if original is equal to reversed
+    return original == reversed_num
+
+# Example Usage
+number = 121
+print(isPalindrome(number)) # Output: True
